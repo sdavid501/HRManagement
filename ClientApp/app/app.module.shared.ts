@@ -1,7 +1,5 @@
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { TrackService } from './Services/track.service';
-import { TrackComponent } from './components/track/track.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -22,8 +20,7 @@ export const sharedConfig: NgModule = {
         CounterComponent,
         FetchDataComponent,
         HomeComponent,
-        EmployeeFormComponent,
-        TrackComponent
+        EmployeeFormComponent
     ],
     imports: [
         BrowserModule,
@@ -33,7 +30,6 @@ export const sharedConfig: NgModule = {
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
             { path: 'employee/new', component: EmployeeFormComponent },
-            { path: 'test', component: TrackComponent },
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
             { path: '**', redirectTo: 'home' }
